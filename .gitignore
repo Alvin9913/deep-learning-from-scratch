@@ -1,0 +1,8 @@
+﻿.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.venv/
+CCPD2020/
+*.zip
+.DS_Store
+Thumbs.db

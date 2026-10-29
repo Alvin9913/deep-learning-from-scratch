@@ -1,0 +1,78 @@
+Using device: cuda
+VGG-16 from scratch successfully instantiated!
+Output shape for batch size 2: torch.Size([2, 10])
+Using device: cuda
+
+==================== Training VGG16 on MNIST ====================
+Starting training for 10 epochs on cuda...
+Epoch [1/10], Loss: 0.1719
+Epoch [2/10], Loss: 0.0437
+Epoch [3/10], Loss: 0.0291
+Epoch [4/10], Loss: 0.0204
+Epoch [5/10], Loss: 0.0182
+Epoch [6/10], Loss: 0.0142
+Epoch [7/10], Loss: 0.0108
+Epoch [8/10], Loss: 0.0088
+Epoch [9/10], Loss: 0.0094
+Epoch [10/10], Loss: 0.0058
+Training finished in 236.31 seconds.
+Metrics -> Acc: 0.9949 | Precision: 0.9949 | Recall: 0.9948 | F1: 0.9949
+
+==================== Training VGG16 on CIFAR10 ====================
+Starting training for 10 epochs on cuda...
+Epoch [1/10], Loss: 1.3961
+Epoch [2/10], Loss: 0.8838
+Epoch [3/10], Loss: 0.6619
+Epoch [4/10], Loss: 0.5229
+Epoch [5/10], Loss: 0.4174
+Epoch [6/10], Loss: 0.3373
+Epoch [7/10], Loss: 0.2685
+Epoch [8/10], Loss: 0.2225
+Epoch [9/10], Loss: 0.1747
+Epoch [10/10], Loss: 0.1487
+Training finished in 241.07 seconds.
+Metrics -> Acc: 0.8292 | Precision: 0.8311 | Recall: 0.8292 | F1: 0.8289
+
+==================== Training VGG16 on CIFAR100 ====================
+Starting training for 10 epochs on cuda...
+Epoch [1/10], Loss: 4.2189
+Epoch [2/10], Loss: 3.5744
+Epoch [3/10], Loss: 3.1022
+Epoch [4/10], Loss: 2.7019
+Epoch [5/10], Loss: 2.3864
+Epoch [6/10], Loss: 2.1220
+Epoch [7/10], Loss: 1.8844
+Epoch [8/10], Loss: 1.6893
+Epoch [9/10], Loss: 1.5008
+Epoch [10/10], Loss: 1.3189
+Training finished in 239.22 seconds.
+Metrics -> Acc: 0.4588 | Precision: 0.5105 | Recall: 0.4588 | F1: 0.4536
+--- Evaluating Conv Layers (CIFAR-10, 3 Epochs) ---
+Starting training for 3 epochs on cuda...
+Epoch [1/3], Loss: 1.7710
+Epoch [2/3], Loss: 1.5476
+Epoch [3/3], Loss: 1.4668
+Training finished in 39.25 seconds.
+Metrics -> Acc: 0.4534 | Precision: 0.5078 | Recall: 0.4534 | F1: 0.4448
+Starting training for 3 epochs on cuda...
+Epoch [1/3], Loss: 1.2476
+Epoch [2/3], Loss: 0.8734
+Epoch [3/3], Loss: 0.7109
+Training finished in 41.38 seconds.
+Metrics -> Acc: 0.6782 | Precision: 0.7372 | Recall: 0.6782 | F1: 0.6657
+
+--- Evaluating Conv Filters (CIFAR-10, 3 Epochs) ---
+Starting training for 3 epochs on cuda...
+Epoch [1/3], Loss: 1.5891
+Epoch [2/3], Loss: 1.2960
+Epoch [3/3], Loss: 1.1757
+Training finished in 38.36 seconds.
+Metrics -> Acc: 0.5847 | Precision: 0.6157 | Recall: 0.5847 | F1: 0.5801
+{'training_time': 38.363242387771606,
+ 'train_loss_history': [1.589091171684265,
+  1.2959770770645143,
+  1.175655540084839],
+ 'accuracy': 0.5847,
+ 'precision': 0.6156689747085138,
+ 'recall': 0.5847000000000001,
+ 'f1_score': 0.5801050093479201}
