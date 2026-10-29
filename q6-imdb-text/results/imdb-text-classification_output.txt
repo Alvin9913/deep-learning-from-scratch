@@ -1,0 +1,80 @@
+Using device: cuda
+vocab size: 23
+sample vocab entries: [('<PAD>', 0), ('<UNK>', 1), ('movie', 2), ('was', 3), ('terrible', 4), ('not', 5), ('this', 6), ('absolutely', 7), ('wonderful', 8), ('i', 9)]
+encoded + padded: [6, 2, 3, 7, 8, 9, 10, 11, 0, 0, 0, 0]
+Dataset extracted to: C:\Users\84447\.keras\datasets\aclImdb
+Contents: ['imdb.vocab', 'imdbEr.txt', 'README', 'test', 'train']
+Full training set: 25000 reviews
+Test set: 25000 reviews
+Example review: Bromwell High is a cartoon comedy. It ran at the same time as some other programs about school life, such as "Teachers". My 35 years in the teaching profession lead me to believe that Bromwell High's  ...
+Example label: 1
+Train subset: 12500 reviews
+Validation subset: 12500 reviews
+Test set (untouched): 25000 reviews
+Vocabulary size: 20000
+X_train shape: (12500, 250)
+X_val shape: (12500, 250)
+X_test shape: (25000, 250)
+Sample encoded review: [   8 3796    8    2 1996  726 3183  305 1205  421 2959 1064   34   45
+   23 1282    1 8009   16    4] ...
+Number of training batches: 391
+Number of validation batches: 391
+Number of test batches: 782
+batch X shape: torch.Size([32, 200]) | batch y shape: torch.Size([32])
+batch X dtype: torch.int64 | batch y dtype: torch.float32
+output shape: torch.Size([2, 200, 64])
+tensor([0., 1., 0., 1., 0., 1.], device='cuda:0')
+tensor([0.8415, 0.5403, 0.6816, 0.7318, 0.5332, 0.8460], device='cuda:0')
+output shape: torch.Size([2, 200, 64])
+attention weights shape: torch.Size([2, 4, 200, 200])
+attention row sums (should be ~1.0): 1.0
+mask shape: torch.Size([2, 1, 1, 200])
+encoder block output shape: torch.Size([2, 200, 64])
+avg attention weight on a PAD position (should be ~0): 0.0
+avg attention weight on a REAL position (should be higher): 0.018107080832123756
+logits shape: torch.Size([32])
+sample logits: tensor([0.1791, 0.1554, 0.1621, 0.0936, 0.1477], device='cuda:0',
+       grad_fn=<SliceBackward0>)
+sample probabilities (after sigmoid): tensor([0.5447, 0.5388, 0.5404, 0.5234, 0.5368], device='cuda:0',
+       grad_fn=<SigmoidBackward0>)
+total trainable parameters: 1347009
+Epoch 1/2 - Train Loss: 0.7130, Train Acc: 0.4820 | Val Loss: 0.7005, Val Acc: 0.4900 (0.2s)
+Epoch 2/2 - Train Loss: 0.6918, Train Acc: 0.5320 | Val Loss: 0.7030, Val Acc: 0.4900 (0.1s)
+Epoch 1/10 - Train Loss: 0.5742, Train Acc: 0.6693 | Val Loss: 0.4661, Val Acc: 0.7748 (3.1s)
+Epoch 2/10 - Train Loss: 0.4178, Train Acc: 0.8103 | Val Loss: 0.4201, Val Acc: 0.8078 (3.0s)
+Epoch 3/10 - Train Loss: 0.3427, Train Acc: 0.8511 | Val Loss: 0.3821, Val Acc: 0.8314 (3.1s)
+Epoch 4/10 - Train Loss: 0.2795, Train Acc: 0.8845 | Val Loss: 0.3817, Val Acc: 0.8405 (3.1s)
+Epoch 5/10 - Train Loss: 0.2255, Train Acc: 0.9112 | Val Loss: 0.4180, Val Acc: 0.8382 (2.9s)
+Epoch 6/10 - Train Loss: 0.1875, Train Acc: 0.9285 | Val Loss: 0.4155, Val Acc: 0.8418 (2.9s)
+Epoch 7/10 - Train Loss: 0.1553, Train Acc: 0.9426 | Val Loss: 0.4457, Val Acc: 0.8425 (2.9s)
+Epoch 8/10 - Train Loss: 0.1365, Train Acc: 0.9499 | Val Loss: 0.4569, Val Acc: 0.8438 (3.0s)
+Epoch 9/10 - Train Loss: 0.1065, Train Acc: 0.9610 | Val Loss: 0.4995, Val Acc: 0.8447 (2.9s)
+Epoch 10/10 - Train Loss: 0.0936, Train Acc: 0.9676 | Val Loss: 0.5338, Val Acc: 0.8395 (3.0s)
+==================================================
+Final Test Set Evaluation
+==================================================
+Test Loss:      0.5630
+Test Accuracy:  0.8258
+Precision:      0.8071
+Recall:         0.8562
+F1-Score:       0.8309
+Epoch 1/10 - Train Loss: 0.6679, Train Acc: 0.5797 | Val Loss: 0.6529, Val Acc: 0.6120 (5.9s)
+Epoch 2/10 - Train Loss: 0.5327, Train Acc: 0.7286 | Val Loss: 0.5088, Val Acc: 0.7430 (5.7s)
+Epoch 3/10 - Train Loss: 0.4591, Train Acc: 0.7828 | Val Loss: 0.4425, Val Acc: 0.7961 (5.5s)
+Epoch 4/10 - Train Loss: 0.4153, Train Acc: 0.8080 | Val Loss: 0.4067, Val Acc: 0.8172 (5.5s)
+Epoch 5/10 - Train Loss: 0.3878, Train Acc: 0.8270 | Val Loss: 0.3987, Val Acc: 0.8257 (5.6s)
+Epoch 6/10 - Train Loss: 0.3621, Train Acc: 0.8404 | Val Loss: 0.3754, Val Acc: 0.8396 (5.9s)
+Epoch 7/10 - Train Loss: 0.3353, Train Acc: 0.8572 | Val Loss: 0.3979, Val Acc: 0.8351 (5.8s)
+Epoch 8/10 - Train Loss: 0.3176, Train Acc: 0.8654 | Val Loss: 0.3938, Val Acc: 0.8391 (5.5s)
+Epoch 9/10 - Train Loss: 0.2974, Train Acc: 0.8751 | Val Loss: 0.3833, Val Acc: 0.8430 (5.5s)
+Epoch 10/10 - Train Loss: 0.2829, Train Acc: 0.8829 | Val Loss: 0.3669, Val Acc: 0.8538 (5.5s)
+
+Restored best checkpoint (Val Acc: 0.8538)
+==================================================
+Final Test Set Evaluation (best checkpoint)
+==================================================
+Test Loss:      0.3717
+Test Accuracy:  0.8480
+Precision:      0.8378
+Recall:         0.8631
+F1-Score:       0.8503

@@ -1,0 +1,134 @@
+Using device: cuda
+Sanity Check Passed!
+Model Architecture:
+FeedForwardNN(
+  (network): Sequential(
+    (0): Linear(in_features=784, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=128, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=128, out_features=10, bias=True)
+  )
+)
+Output shape for batch size 32: torch.Size([32, 10])
+
+==================== Processing MNIST ====================
+100%|█████████████████████████████████████████████████████████████████████████████| 9.91M/9.91M [00:01<00:00, 4.99MB/s]
+100%|██████████████████████████████████████████████████████████████████████████████| 28.9k/28.9k [00:00<00:00, 129kB/s]
+100%|█████████████████████████████████████████████████████████████████████████████| 1.65M/1.65M [00:01<00:00, 1.00MB/s]
+100%|█████████████████████████████████████████████████████████████████████████████| 4.54k/4.54k [00:00<00:00, 24.1MB/s]
+Starting training for 10 epochs on cuda...
+Epoch [1/10], Loss: 0.5519
+Epoch [2/10], Loss: 0.2364
+Epoch [3/10], Loss: 0.1767
+Epoch [4/10], Loss: 0.1395
+Epoch [5/10], Loss: 0.1138
+Epoch [6/10], Loss: 0.0951
+Epoch [7/10], Loss: 0.0808
+Epoch [8/10], Loss: 0.0702
+Epoch [9/10], Loss: 0.0612
+Epoch [10/10], Loss: 0.0538
+Training finished in 88.90 seconds.
+Evaluation Metrics -> Acc: 0.9743 | Precision: 0.9743 | Recall: 0.9743 | F1: 0.9742
+
+==================== Processing CIFAR10 ====================
+100%|████████████████████████████████████████████████████████████████████████████████| 170M/170M [21:57<00:00, 129kB/s]
+Starting training for 10 epochs on cuda...
+Epoch [1/10], Loss: 1.7827
+Epoch [2/10], Loss: 1.5302
+Epoch [3/10], Loss: 1.4234
+Epoch [4/10], Loss: 1.3444
+Epoch [5/10], Loss: 1.2802
+Epoch [6/10], Loss: 1.2224
+Epoch [7/10], Loss: 1.1714
+Epoch [8/10], Loss: 1.1231
+Epoch [9/10], Loss: 1.0833
+Epoch [10/10], Loss: 1.0377
+Training finished in 131.14 seconds.
+Evaluation Metrics -> Acc: 0.5323 | Precision: 0.5317 | Recall: 0.5323 | F1: 0.5299
+
+==================== Processing CIFAR100 ====================
+100%|████████████████████████████████████████████████████████████████████████████████| 169M/169M [19:19<00:00, 146kB/s]
+Starting training for 10 epochs on cuda...
+Epoch [1/10], Loss: 4.1631
+Epoch [2/10], Loss: 3.6741
+Epoch [3/10], Loss: 3.4927
+Epoch [4/10], Loss: 3.3685
+Epoch [5/10], Loss: 3.2633
+Epoch [6/10], Loss: 3.1690
+Epoch [7/10], Loss: 3.0802
+Epoch [8/10], Loss: 3.0003
+Epoch [9/10], Loss: 2.9265
+Epoch [10/10], Loss: 2.8555
+Training finished in 126.66 seconds.
+Evaluation Metrics -> Acc: 0.2413 | Precision: 0.2440 | Recall: 0.2413 | F1: 0.2255
+=== Ablation 1: Effect of Hidden Nodes ===
+
+Evaluating configuration: Small [64, 32]
+Starting training for 5 epochs on cuda...
+Epoch [1/5], Loss: 0.6219
+Epoch [2/5], Loss: 0.2606
+Epoch [3/5], Loss: 0.2042
+Epoch [4/5], Loss: 0.1682
+Epoch [5/5], Loss: 0.1435
+Training finished in 44.61 seconds.
+Evaluation Metrics -> Acc: 0.9576 | Precision: 0.9573 | Recall: 0.9572 | F1: 0.9572
+
+Evaluating configuration: Medium [256, 128]
+Starting training for 5 epochs on cuda...
+Epoch [1/5], Loss: 0.5542
+Epoch [2/5], Loss: 0.2384
+Epoch [3/5], Loss: 0.1793
+Epoch [4/5], Loss: 0.1420
+Epoch [5/5], Loss: 0.1160
+Training finished in 45.25 seconds.
+Evaluation Metrics -> Acc: 0.9651 | Precision: 0.9649 | Recall: 0.9650 | F1: 0.9649
+
+Evaluating configuration: Large [512, 256]
+Starting training for 5 epochs on cuda...
+Epoch [1/5], Loss: 0.5270
+Epoch [2/5], Loss: 0.2257
+Epoch [3/5], Loss: 0.1656
+Epoch [4/5], Loss: 0.1299
+Epoch [5/5], Loss: 0.1066
+Training finished in 45.20 seconds.
+Evaluation Metrics -> Acc: 0.9692 | Precision: 0.9690 | Recall: 0.9690 | F1: 0.9690
+
+=== Ablation 2: Effect of Hidden Layers ===
+
+Evaluating configuration: 1 Hidden Layer
+Starting training for 5 epochs on cuda...
+Epoch [1/5], Loss: 0.4329
+Epoch [2/5], Loss: 0.2292
+Epoch [3/5], Loss: 0.1783
+Epoch [4/5], Loss: 0.1469
+Epoch [5/5], Loss: 0.1248
+Training finished in 42.51 seconds.
+Evaluation Metrics -> Acc: 0.9656 | Precision: 0.9655 | Recall: 0.9651 | F1: 0.9652
+
+Evaluating configuration: 2 Hidden Layers
+Starting training for 5 epochs on cuda...
+Epoch [1/5], Loss: 0.5445
+Epoch [2/5], Loss: 0.2391
+Epoch [3/5], Loss: 0.1781
+Epoch [4/5], Loss: 0.1399
+Epoch [5/5], Loss: 0.1146
+Training finished in 44.06 seconds.
+Evaluation Metrics -> Acc: 0.9676 | Precision: 0.9675 | Recall: 0.9673 | F1: 0.9673
+
+Evaluating configuration: 3 Hidden Layers
+Starting training for 5 epochs on cuda...
+Epoch [1/5], Loss: 0.7720
+Epoch [2/5], Loss: 0.2454
+Epoch [3/5], Loss: 0.1743
+Epoch [4/5], Loss: 0.1337
+Epoch [5/5], Loss: 0.1065
+Training finished in 43.71 seconds.
+Evaluation Metrics -> Acc: 0.9686 | Precision: 0.9685 | Recall: 0.9682 | F1: 0.9683
+
+--- Ablation Summary ---
+Hidden Nodes vs Accuracy: {'Small [64, 32]': 0.9576, 'Medium [256, 128]': 0.9651, 'Large [512, 256]': 0.9692}
+Hidden Layers vs Accuracy: {'1 Hidden Layer': 0.9656, '2 Hidden Layers': 0.9676, '3 Hidden Layers': 0.9686}
+=== Training Random Forest Baseline on MNIST ===
+Random Forest Training Time: 0.88s
+Random Forest Metrics -> Acc: 0.9503 | Precision: 0.9501 | Recall: 0.9497 | F1: 0.9498

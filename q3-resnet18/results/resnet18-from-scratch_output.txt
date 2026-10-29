@@ -1,0 +1,64 @@
+Active compute environment: cuda
+
+==================== Training ResNet-18 on MNIST ====================
+Training on cuda for 10 epochs (SGD, lr=0.01, batch_size=32)...
+Epoch [1/10], Loss: 0.1216
+Epoch [2/10], Loss: 0.0299
+Epoch [3/10], Loss: 0.0170
+Epoch [4/10], Loss: 0.0100
+Epoch [5/10], Loss: 0.0070
+Epoch [6/10], Loss: 0.0038
+Epoch [7/10], Loss: 0.0023
+Epoch [8/10], Loss: 0.0016
+Epoch [9/10], Loss: 0.0009
+Epoch [10/10], Loss: 0.0007
+Training finished in 273.56 seconds.
+Metrics -> Acc: 0.9953 | Precision: 0.9953 | Recall: 0.9952 | F1: 0.9952
+
+==================== Training ResNet-18 on CIFAR10 ====================
+Training on cuda for 10 epochs (SGD, lr=0.01, batch_size=32)...
+Epoch [1/10], Loss: 1.2885
+Epoch [2/10], Loss: 0.7829
+Epoch [3/10], Loss: 0.5481
+Epoch [4/10], Loss: 0.3857
+Epoch [5/10], Loss: 0.2510
+Epoch [6/10], Loss: 0.1578
+Epoch [7/10], Loss: 0.1043
+Epoch [8/10], Loss: 0.0693
+Epoch [9/10], Loss: 0.0583
+Epoch [10/10], Loss: 0.0380
+Training finished in 269.01 seconds.
+Metrics -> Acc: 0.7884 | Precision: 0.7951 | Recall: 0.7884 | F1: 0.7824
+
+==================== Training ResNet-18 on CIFAR100 ====================
+Training on cuda for 10 epochs (SGD, lr=0.01, batch_size=32)...
+Epoch [1/10], Loss: 3.5465
+Epoch [2/10], Loss: 2.6639
+Epoch [3/10], Loss: 2.1424
+Epoch [4/10], Loss: 1.7475
+Epoch [5/10], Loss: 1.4157
+Epoch [6/10], Loss: 1.1009
+Epoch [7/10], Loss: 0.7787
+Epoch [8/10], Loss: 0.4923
+Epoch [9/10], Loss: 0.2539
+Epoch [10/10], Loss: 0.1137
+Training finished in 269.32 seconds.
+Metrics -> Acc: 0.5188 | Precision: 0.5444 | Recall: 0.5188 | F1: 0.5214
+
+==================== Ablation on Residual Connections (CIFAR-10, 3 Epochs) ====================
+
+--- 1. PlainNet-18 (Without Shortcut Connections) ---
+Training on cuda for 3 epochs (SGD, lr=0.01, batch_size=32)...
+Epoch [1/3], Loss: 1.3544
+Epoch [2/3], Loss: 0.8150
+Epoch [3/3], Loss: 0.5918
+Training finished in 76.74 seconds.
+Metrics -> Acc: 0.7738 | Precision: 0.7889 | Recall: 0.7738 | F1: 0.7713
+
+--- 2. ResNet-18 (With Shortcut Connections) ---
+Training on cuda for 3 epochs (SGD, lr=0.01, batch_size=32)...
+Epoch [1/3], Loss: 1.2955
+Epoch [2/3], Loss: 0.7987
+Epoch [3/3], Loss: 0.5618
+Training finished in 80.38 seconds.
+Metrics -> Acc: 0.7197 | Precision: 0.7523 | Recall: 0.7197 | F1: 0.7120
