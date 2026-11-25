@@ -74,7 +74,10 @@ The `results/` folder in each experiment holds the curves and figures exported s
 ## Environment
 
 ```bash
-pip install torch torchvision numpy matplotlib scikit-learn tensorflow
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
 ```
+
+**Apple Silicon:** `pip install tensorflow` fails on macOS arm64 — run `pip install tensorflow-macos tensorflow-metal` instead (everything else in `requirements.txt` installs as-is). On Intel Mac or Colab, `requirements.txt` works unchanged.
 
 Datasets download by themselves through `torchvision.datasets` / `tensorflow_datasets`, the notebooks already set this up. `q6` downloads aclImdb (about 80MB) the first time it runs.
