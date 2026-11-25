@@ -71,6 +71,20 @@ The `results/` folder in each experiment holds the curves and figures exported s
 | ![MLP experiment](q1-mlp/results/mlp-from-scratch_fig01.png) | ![MLP comparison](q1-mlp/results/mlp-from-scratch_fig04.png) |
 | ![ResNet comparison](q3-resnet18/results/resnet18-from-scratch_fig02.png) | ![IMDb training](q6-imdb-text/results/imdb-text-classification_fig01.png) |
 
+## Reports
+
+Each experiment's written report, exported to PDF so it renders in the browser (the `.docx` originals are not part of the repo):
+
+| Experiment | Report |
+|---|---|
+| q1 · Configurable MLP | [q1-mlp.pdf](reports/q1-mlp.pdf) |
+| q2 · VGG-16 from scratch | [q2-vgg16.pdf](reports/q2-vgg16.pdf) |
+| q3 · ResNet18, residual vs plain | [q3-resnet18.pdf](reports/q3-resnet18.pdf) |
+| q4 · numpy MLP | [q4-numpy-mlp.pdf](reports/q4-numpy-mlp.pdf) |
+| q4 · supplementary findings | [q4-supplementary-findings.pdf](reports/q4-supplementary-findings.pdf) |
+| q5 · numpy convolution (im2col) | [q5-im2col-conv.pdf](reports/q5-im2col-conv.pdf) |
+| q6 · IMDb sentiment | [q6-imdb-text.pdf](reports/q6-imdb-text.pdf) |
+
 ## Environment
 
 ```bash
